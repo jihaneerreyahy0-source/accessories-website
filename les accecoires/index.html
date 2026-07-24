@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA ACCESSORIES | Fine Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    ✦ FREE SHIPPING ON ALL ORDERS OVER 500 DH ✦
+  </div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-left">
+      <a href="#" class="search-icon">🔍</a>
+    </div>
+    
+    <div class="logo">
+      <h1>AURA ACCESSORIES</h1>
+      <span>FINE JEWELRY</span>
+    </div>
+
+    <div class="nav-right">
+      <div class="cart-btn" onclick="toggleCart()">
+        🛍️ <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar Menu -->
+  <nav class="main-nav">
+    <a href="#">Home</a>
+    <a href="#products-section">Catalog</a>
+    <a href="#products-section">Collections ▾</a>
+    <a href="#">Discover ▾</a>
+    <a href="#">Customer Care ▾</a>
+  </nav>
+
+  <!-- Hero Section with Arches -->
+  <section class="hero">
+    <div class="hero-images">
+      <div class="arch-frame arch-1">
+        <img src="IMG1.png" alt="AURA ACCESSORIES">
+        <div class="img-box"></div>
+      </div>
+      <div class="arch-frame arch-2">
+        <img src="img2.jpg" alt="AURA ACCESSORIES">
+        <div class="img-box">IMAGE 2</div>
+      </div>
+    </div>
+    
+    <div class="hero-text">
+      <h2>SUMMER</h2>
+      <p class="subtitle">— collection —</p>
+      <p class="tagline">WHERE GLAMOUR MEETS ARTISTRY</p>
+      <a href="#products-section" class="btn-shop">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- Categories Filter Bar (Doira Icons) -->
+  <section class="categories-bar">
+    <div class="cat-item active" onclick="filterCategory('all', this)">
+      <div class="cat-circle">✨</div>
+      <span>All</span>
+    </div>
+    <div class="cat-item" onclick="filterCategory('necklaces', this)">
+      <div class="cat-circle">📿</div>
+      <span>Necklaces</span>
+    </div>
+    <div class="cat-item" onclick="filterCategory('earrings', this)">
+      <div class="cat-circle">💎</div>
+      <span>Earrings</span>
+    </div>
+    <div class="cat-item" onclick="filterCategory('rings', this)">
+      <div class="cat-circle">💍</div>
+      <span>Rings</span>
+    </div>
+    <div class="cat-item" onclick="filterCategory('charms', this)">
+      <div class="cat-circle">🌸</div>
+      <span>Charms</span>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-container" id="products-section">
+    <h3 class="section-title">New Arrivals</h3>
+    <div class="products-grid" id="products-grid">
+      <!-- Les produits ghadi yt-generaw dynamique b JavaScript -->
+    </div>
+  </section>
+
+  <!-- Banner Middle -->
+  <section class="quote-banner">
+    <div class="banner-overlay">
+      <h3>Beyond Ordinary, Always Extraordinary</h3>
+      <a href="#products-section" class="btn-shop-white">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- Side Cart Drawer -->
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>YOUR CART 🛍️</h2>
+      <button class="close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="total-box">
+        <span>TOTAL :</span>
+        <span id="cart-total">0 DH</span>
+      </div>
+
+      <div class="checkout-form">
+        <input type="text" id="client-name" placeholder="Nom Complet" required>
+        <input type="tel" id="client-phone" placeholder="Numéro WhatsApp" required>
+        <input type="text" id="client-city" placeholder="Ville & Adresse" required>
+      </div>
+
+      <button class="whatsapp-btn" onclick="sendWhatsApp()">
+        COMMANDER VIA WHATSAPP 📲
+      </button>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+  <!-- Footer Section -->
+<footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Column 1: Brand Info & Newsletter -->
+      <div class="footer-col brand-col">
+        <h2>AURA ACCESSORIES</h2>
+        <p class="tagline">FINE JEWELRY & HANDMADE ACCESORIES</p>
+        <p class="desc">Sublimez votre style quotidien avec nos bijoux élégants et faits avec amour.</p>
+        
+        <div class="newsletter-box">
+          <h4>REJOIGNEZ NOTRE NEWSLETTER</h4>
+          <div class="input-group">
+            <input type="email" placeholder="Votre adresse email...">
+            <button type="button">S'INSCRIRE</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#products-section">Catalog</a></li>
+          <li><a href="#products-section">Nouveautés</a></li>
+          <li><a href="#">Promotions</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 3: Customer Care -->
+      <div class="footer-col">
+        <h4>SERVICE CLIENT</h4>
+        <ul>
+          <li><a href="#">Livraison & Retours</a></li>
+          <li><a href="#">Guide des Tailles</a></li>
+          <li><a href="#">Entretien des Bijoux</a></li>
+          <li><a href="#">FAQ / Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Column 4: Social & Delivery -->
+      <div class="footer-col">
+        <h4>SUIVEZ-NOUS</h4>
+        <div class="social-links">
+          <a href="#" target="_blank">Instagram</a>
+          <a href="#" target="_blank">TikTok</a>
+          <a href="#" target="_blank">Pinterest</a>
+        </div>
+        
+        <div class="delivery-badge">
+          <span>🚚 Livraison Partout au Maroc</span>
+          <span class="cod">💵 Paiement à la Livraison</span>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom">
+      <p>© 2026 MOON STONE. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
