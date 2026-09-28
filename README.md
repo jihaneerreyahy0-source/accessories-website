@@ -29,10 +29,7 @@ intégration API.
 ├── js.js # Logique JavaScript (Produits, Panier, WhatsApp)
 └── images/ # Dossier d'images des produits (.png)
 ⚙️ Configuration & Installation
-1. Cloner le projet :
-git clone https://github.com/votre-username/aura-accessories.git
-cd aura-accessories
-2. Personnaliser le numéro WhatsApp :
+
 Dans le fichier js.js, modifiez la variable PHONE_NUMBER avec votre numéro au format
 international :
 
